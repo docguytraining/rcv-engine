@@ -4,7 +4,7 @@ A zero-dependency TypeScript library for tabulating ranked-choice elections. Sup
 
 [![npm version](https://img.shields.io/npm/v/rcv-engine)](https://www.npmjs.com/package/rcv-engine)
 [![license: AGPL v3](https://img.shields.io/badge/license-AGPL%20v3-blue)](LICENSE)
-[![CI](https://github.com/paulpehrson/rcv-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/paulpehrson/rcv-engine/actions/workflows/ci.yml)
+[![CI](https://github.com/docguytraining/rcv-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/docguytraining/rcv-engine/actions/workflows/ci.yml)
 
 ---
 
@@ -156,7 +156,7 @@ See [`docs/algorithm.md`](packages/rcv-engine/docs/algorithm.md) for the normati
 ## Development
 
 ```bash
-git clone https://github.com/paulpehrson/rcv-engine.git
+git clone https://github.com/docguytraining/rcv-engine.git
 cd rcv-engine/packages/rcv-engine
 npm install
 npm test          # run all 141 tests

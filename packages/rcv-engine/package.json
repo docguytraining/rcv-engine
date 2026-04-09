@@ -18,11 +18,11 @@
   "author": "Paul Pehrson",
   "repository": {
     "type": "git",
-    "url": "https://github.com/paulpehrson/rcv-engine.git"
+    "url": "https://github.com/docguytraining/rcv-engine.git"
   },
-  "homepage": "https://github.com/paulpehrson/rcv-engine#readme",
+  "homepage": "https://github.com/docguytraining/rcv-engine#readme",
   "bugs": {
-    "url": "https://github.com/paulpehrson/rcv-engine/issues"
+    "url": "https://github.com/docguytraining/rcv-engine/issues"
   },
   "type": "module",
   "exports": {

@@ -3,8 +3,8 @@
 A zero-dependency TypeScript library for tabulating ranked-choice elections. Supports **Instant Runoff Voting (IRV)** and **Single Transferable Vote (STV)**, producing a complete, deterministic, independently auditable result.
 
 [![npm version](https://img.shields.io/npm/v/rcv-engine)](https://www.npmjs.com/package/rcv-engine)
-[![license: AGPL v3](https://img.shields.io/badge/license-AGPL%20v3-blue)](https://github.com/paulpehrson/rcv-engine/blob/main/LICENSE)
-[![CI](https://github.com/paulpehrson/rcv-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/paulpehrson/rcv-engine/actions/workflows/ci.yml)
+[![license: AGPL v3](https://img.shields.io/badge/license-AGPL%20v3-blue)](https://github.com/docguytraining/rcv-engine/blob/main/LICENSE)
+[![CI](https://github.com/docguytraining/rcv-engine/actions/workflows/ci.yml/badge.svg)](https://github.com/docguytraining/rcv-engine/actions/workflows/ci.yml)
 
 ---
 
@@ -173,7 +173,7 @@ assert(hashInput(originalInput) === publishedResult.meta.inputHash);
 assert(deepEqual(tabulate(originalInput), publishedResult));
 ```
 
-See the [Auditing Guide](https://github.com/paulpehrson/rcv-engine/blob/main/packages/rcv-engine/docs/auditing.md) for a complete walkthrough, including how to reproduce tie-break decisions and verify STV transfer values.
+See the [Auditing Guide](https://github.com/docguytraining/rcv-engine/blob/main/packages/rcv-engine/docs/auditing.md) for a complete walkthrough, including how to reproduce tie-break decisions and verify STV transfer values.
 
 ---
 
@@ -203,13 +203,13 @@ try {
 
 ## Algorithm reference
 
-See the [Algorithm Reference](https://github.com/paulpehrson/rcv-engine/blob/main/packages/rcv-engine/docs/algorithm.md) for the normative description of IRV and STV, including worked examples, quota calculations, surplus transfer math, and tie-break logic.
+See the [Algorithm Reference](https://github.com/docguytraining/rcv-engine/blob/main/packages/rcv-engine/docs/algorithm.md) for the normative description of IRV and STV, including worked examples, quota calculations, surplus transfer math, and tie-break logic.
 
 ---
 
 ## License
 
-GNU Affero General Public License v3.0 — see [LICENSE](https://github.com/paulpehrson/rcv-engine/blob/main/LICENSE).
+GNU Affero General Public License v3.0 — see [LICENSE](https://github.com/docguytraining/rcv-engine/blob/main/LICENSE).
 
 The AGPL ensures that anyone who runs a modified version of this engine as a network service must also publish their modifications. This keeps the code that counts votes auditable regardless of who deploys it.
 
