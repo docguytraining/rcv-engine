@@ -1,6 +1,6 @@
 {
   "name": "rcv-engine",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Zero-dependency TypeScript library for tabulating ranked-choice elections (IRV and STV) with a complete, auditable result.",
   "keywords": [
     "rcv",
@@ -27,27 +27,32 @@
   "type": "module",
   "exports": {
     ".": {
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.cjs",
-      "types": "./dist/types/index.d.ts"
+      "require": "./dist/cjs/index.js"
     }
   },
-  "main": "./dist/cjs/index.cjs",
+  "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
   "files": [
     "dist",
     "src",
-    "docs"
+    "docs",
+    "CHANGELOG.md"
   ],
   "scripts": {
-    "build": "npm run build:esm && npm run build:cjs",
+    "build": "npm run build:esm && npm run build:cjs && npm run build:types && npm run build:cjs:fixup",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:types": "tsc -p tsconfig.types.json",
+    "build:cjs:fixup": "node scripts/fix-cjs.mjs",
+    "clean": "rm -rf dist",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "vitest run",
     "test:watch": "vitest",
-    "prepublishOnly": "npm run typecheck && npm run build && npm test"
+    "test:pack": "node scripts/test-pack.mjs",
+    "prepublishOnly": "npm run clean && npm run typecheck && npm run build && npm test && npm run test:pack"
   },
   "devDependencies": {
     "@types/node": "^25.5.2",
