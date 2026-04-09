@@ -24,8 +24,8 @@ jobs:
           cache: npm
           cache-dependency-path: packages/rcv-engine/package-lock.json
 
-      - name: Configure npm for OIDC
-        run: echo "//registry.npmjs.org/:_authToken=" >> ~/.npmrc
+      - name: Upgrade npm to support OIDC Trusted Publishers
+        run: npm install -g npm@latest
 
       - name: Install dependencies
         working-directory: packages/rcv-engine
