@@ -1,6 +1,6 @@
 {
   "name": "rcv-engine",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Zero-dependency TypeScript library for tabulating ranked-choice elections (IRV and STV) with a complete, auditable result.",
   "keywords": [
     "rcv",
