@@ -134,6 +134,14 @@ dist
 !.yarn/sdks
 !.yarn/versions
 
-# Vite logs files
+# Vite / Vitest timestamp cache files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+vitest.config.ts.timestamp-*
+
+# macOS
+.DS_Store
+
+# TypeScript build output
+dist/
+*.tsbuildinfo

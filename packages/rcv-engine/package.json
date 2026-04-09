@@ -1,17 +1,29 @@
 {
   "name": "rcv-engine",
   "version": "1.0.0",
-  "description": "Zero-dependency TypeScript library for tabulating ranked-choice elections with a complete, auditable result.",
+  "description": "Zero-dependency TypeScript library for tabulating ranked-choice elections (IRV and STV) with a complete, auditable result.",
   "keywords": [
     "rcv",
     "ranked-choice",
     "voting",
     "irv",
+    "instant-runoff",
     "stv",
+    "single-transferable-vote",
     "tabulation",
-    "election"
+    "election",
+    "audit"
   ],
-  "license": "MIT",
+  "license": "AGPL-3.0-only",
+  "author": "Paul Pehrson",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulpehrson/rcv-engine.git"
+  },
+  "homepage": "https://github.com/paulpehrson/rcv-engine#readme",
+  "bugs": {
+    "url": "https://github.com/paulpehrson/rcv-engine/issues"
+  },
   "type": "module",
   "exports": {
     ".": {
@@ -34,9 +46,11 @@
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run typecheck && npm run build && npm test"
   },
   "devDependencies": {
+    "@types/node": "^25.5.2",
     "fast-check": "^4.6.0",
     "typescript": "^5.4.0",
     "vitest": "^1.6.0"
